@@ -42,7 +42,7 @@ class FinanceController extends GetxController {
 
   void addTransaction(Map<String, dynamic> formData) {
     transactions.add(Transaction(
-      id: DateTime.now().toString(),
+      id: DateTime.now().millisecondsSinceEpoch.toString(),
       title: formData['title'],
       amount: double.parse(formData['amount']),
       category: formData['category'],
@@ -52,7 +52,7 @@ class FinanceController extends GetxController {
 
   void addIncome(Map<String, dynamic> formData) {
     transactions.add(Transaction(
-      id: DateTime.now().toString(),
+      id: DateTime.now().millisecondsSinceEpoch.toString(),
       title: formData['title'],
       amount: double.parse(formData['amount']),
       category: 'Income',
