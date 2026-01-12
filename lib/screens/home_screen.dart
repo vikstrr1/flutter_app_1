@@ -118,7 +118,7 @@ class HomeScreen extends StatelessWidget {
   // Income Card
   Widget _buildIncomeCard(FinanceController controller) {
     return Obx(() => Card(
-      color: Colors.green,
+      color: Colors.indigo,
       child: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
