@@ -1,0 +1,29 @@
+name: finance_tracker
+description: "A responsive finance tracker"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # STRICT COURSE VERSIONS
+  get: 4.6.6
+  flutter_form_builder: 9.4.1
+  form_builder_validators: 11.0.0
+  hive_ce: 2.5.0+2
+  hive_ce_flutter: 2.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+# THIS FIXES YOUR ERROR WITHOUT CHANGING DEPENDENCIES
+dependency_overrides:
+  intl: ^0.19.0
