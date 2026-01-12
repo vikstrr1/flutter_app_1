@@ -1,3 +1,4 @@
+import 'package:finance_tracker/models/transaction.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/finance_controller.dart';
@@ -19,11 +20,6 @@ class HomeScreen extends StatelessWidget {
               ? _buildMobileLayout(controller)
               : _buildTabletLayout(controller),
         ),
-      ),
-      // RE-ADDED: The + button in the corner
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => Get.toNamed('/add'),
-        child: const Icon(Icons.add),
       ),
     );
   }
@@ -280,3 +276,4 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+

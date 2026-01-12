@@ -15,9 +15,18 @@ class AllTransactionsScreen extends StatelessWidget {
         itemCount: controller.transactions.length,
         itemBuilder: (context, index) {
           final transaction = controller.transactions[index];
+          
           return ListTile(
             title: Text(transaction.title),
-            subtitle: Text('${transaction.category} - €${transaction.amount}', style: TextStyle(color: transaction.category == 'Income' ? Colors.green : Colors.red)),
+            subtitle: Text(
+              '${transaction.category} - €${transaction.amount}', 
+              style: TextStyle(
+                color: transaction.category == 'Income' ? Colors.green : Colors.red
+              )
+            ),
+            onTap: () {
+              Get.toNamed('/edit/${transaction.id}');
+            },
             trailing: IconButton(
               icon: const Icon(Icons.delete),
               onPressed: () => controller.deleteTransaction(transaction.id),
